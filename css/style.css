@@ -1,0 +1,226 @@
+:root {
+    --primary-blue: #1d1640;
+    --secondary-purple: #53857a;
+    --accent-green: #14e81e;
+    --highlight-light: #abeedc;
+    --text-color: #f8d2dd;
+    --accent-red: #f96847;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary-blue);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+
+#entry-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('../assets/imagens/aurora-01.jpg') no-repeat center 30% fixed;
+    background-size: cover;
+    background-color: var(--primary-blue);
+    animation: slowZoom 40s ease-in-out infinite alternate;
+}
+
+.container {
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: rgba(83, 133, 122, 0.7);
+    box-shadow: 0 0 20px var(--highlight-light);
+}
+
+h1 {
+    font-size: 3.5em;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--highlight-light);
+}
+
+p {
+    font-size: 1.3em;
+    color: var(--highlight-light);
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: 2px solid var(--highlight-light);
+    background-color: var(--secondary-purple);
+    color: var(--text-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: var(--accent-green);
+    color: var(--primary-blue);
+    box-shadow: 0 0 15px var(--accent-green);
+    transform: scale(1.05);
+}
+
+@keyframes slowZoom {
+    0% {
+        background-size: 100% 100%;
+        background-position: center 30%;
+    }
+
+    100% {
+        background-size: 110% 110%;
+        background-position: center 30%;
+    }
+}
+
+.menu-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 5%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(29, 22, 64, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo-giwya {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--accent-green);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-giwya i {
+    margin-right: 10px;
+    font-size: 1.7em;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0% {
+        color: var(--accent-red);
+        text-shadow: 0 0 5px var(--accent-red), 0 0 10px rgba(249, 104, 71, 0.4);
+    }
+
+    50% {
+        color: var(--highlight-light);
+        text-shadow: 0 0 10px var(--highlight-light), 0 0 20px rgba(171, 238, 220, 0.8);
+    }
+
+    100% {
+        color: var(--accent-red);
+        text-shadow: 0 0 5px var(--accent-red), 0 0 10px rgba(249, 104, 71, 0.4);
+    }
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: var(--highlight-light);
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-menu a:hover {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-green);
+}
+
+#main-page {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: var(--primary-blue);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.app-content {
+    color: var(--text-color);
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(171, 238, 220, 0.15);
+}
+
+.section h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: var(--highlight-light);
+}
+
+.section p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(29, 22, 64, 0.6);
+    border: 1px solid rgba(171, 238, 220, 0.25);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--accent-green);
+}
+
+.card p {
+    margin-bottom: 0;
+    font-size: 1em;
+}
+html {
+    scroll-behavior: smooth;
+}
+.section {
+    scroll-margin-top: 100px;
+}
